@@ -272,23 +272,23 @@ function config.nvim_tree()
 end
 
 function config.telescope()
-    if not packer_plugins['plenary.nvim'].loaded then
+    if not packer_plugins["plenary.nvim"].loaded then
         vim.api.nvim_command("packadd plenary.nvim")
         vim.api.nvim_command("packadd popup.nvim")
         vim.api.nvim_command("packadd telescope-fzy-native.nvim")
         vim.api.nvim_command("packadd telescope-file-browser.nvim")
     end
-    require('telescope').setup {
+    require("telescope").setup {
         defaults = {
             layout_config = {
                 horizontal = {prompt_position = "top", results_width = 0.6},
                 vertical = {mirror = false}
             },
-            sorting_strategy = 'ascending',
-            file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-            grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep
+            sorting_strategy = "ascending",
+            file_previewer = require"telescope.previewers".vim_buffer_cat.new,
+            grep_previewer = require"telescope.previewers".vim_buffer_vimgrep
             .new,
-            qflist_previewer = require'telescope.previewers'.vim_buffer_qflist
+            qflist_previewer = require"telescope.previewers".vim_buffer_qflist
             .new
         },
         extensions = {
@@ -298,7 +298,7 @@ function config.telescope()
             }
         }
     }
-    require('telescope').load_extension('fzy_native')
+    require("telescope").load_extension("fzy_native")
 end
 
 function config.autopairs()
@@ -329,11 +329,11 @@ function config.gitsigns()
 end
 
 function config.nvim_treesitter()
-    vim.api.nvim_command('set foldmethod=expr')
-    vim.api.nvim_command('set foldexpr=nvim_treesitter#foldexpr()')
-    require'nvim-treesitter.configs'.setup {
+    vim.api.nvim_command("set foldmethod=expr")
+    vim.api.nvim_command("set foldexpr=nvim_treesitter#foldexpr()")
+    require"nvim-treesitter.configs".setup {
         ensure_installed = "all",
-        ignore_install = { 'phpdoc' },
+        ignore_install = { "phpdoc" },
         sync_install = false,
         highlight = {
             enable = true,
@@ -367,10 +367,10 @@ function config.nvim_lsp()
         settings = {
             Lua = {
                 runtime = {
-                    version = 'LuaJIT',
+                    version = "LuaJIT",
                 },
                 diagnostics = {
-                    globals = {'vim'},
+                    globals = {"vim"},
                 },
                 workspace = {
                     library = vim.api.nvim_get_runtime_file("", true),
@@ -414,7 +414,7 @@ function config.nvim_cmp()
             documentation = cmp.config.window.bordered(),
         },
         formatting = {
-            fields = {'kind', 'abbr', 'menu'},
+            fields = {"kind", "abbr", "menu"},
             format = function(entry, vim_item)
                 local lspkind_icons = {
                     Text = "",
@@ -444,7 +444,7 @@ function config.nvim_cmp()
                     TypeParameter = " ",
                 }
                 local meta_type = vim_item.kind
-                vim_item.kind = lspkind_icons[vim_item.kind]..''
+                vim_item.kind = lspkind_icons[vim_item.kind]..""
                 vim_item.menu = ({
                     buffer = " Buffer",
                     nvim_lsp = meta_type,

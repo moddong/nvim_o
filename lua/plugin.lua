@@ -39,8 +39,8 @@ return require("packer").startup({
             config = conf.telescope,
             requires = {
                 {"nvim-lua/popup.nvim", opt = true},
-                {"nvim-lua/plenary.nvim",opt = true},
-                {"nvim-telescope/telescope-fzy-native.nvim",opt = true},
+                {"nvim-lua/plenary.nvim", opt = true},
+                {"nvim-telescope/telescope-fzy-native.nvim", opt = true},
             }
         }
         use {
@@ -87,7 +87,7 @@ return require("packer").startup({
         }
         use {
             "lukas-reineke/indent-blankline.nvim",
-            event = {"BufRead","BufNewFile"},
+            event = {"BufRead", "BufNewFile"},
             config = conf.indent_blankline,
         }
         use {
@@ -119,7 +119,7 @@ return require("packer").startup({
     config = {
         compile_path = compile_path,
         git = {
-            default_url_format = 'git@github.com:%s',
+            default_url_format = "git@github.com:%s",
             clone_timeout = 120
         },
     }
