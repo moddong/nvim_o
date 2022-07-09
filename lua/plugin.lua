@@ -16,22 +16,18 @@ return require("packer").startup({
             "glepnir/zephyr-nvim",
             config = conf.zephyr,
         }
-
         use {
             "glepnir/galaxyline.nvim",
             branch = "main",
             config = conf.galaxyline,
             requires = "kyazdani42/nvim-web-devicons"
         }
-
         use {
             "kyazdani42/nvim-tree.lua",
             cmd = "NvimTreeToggle",
             config = conf.nvim_tree,
             requires = "kyazdani42/nvim-web-devicons"
         }
-
-
         use {
             "akinsho/nvim-bufferline.lua",
             config = conf.nvim_bufferline,
@@ -47,37 +43,31 @@ return require("packer").startup({
                 {"nvim-telescope/telescope-fzy-native.nvim",opt = true},
             }
         }
-
         use {
             "windwp/nvim-autopairs",
             event = "InsertEnter",
             config = conf.autopairs,
         }
-
         use {
             "numToStr/Comment.nvim",
             event = "BufRead",
             config = conf.comment,
         }
-
         use {
             "kevinhwang91/nvim-hlslens",
             event = "BufRead",
             config = conf.hlslens,
         }
-
         use {
             "Pocco81/AutoSave.nvim",
             event = "InsertLeave",
             config = conf.autosave,
         }
-
         use {
             "folke/which-key.nvim",
             event = {"BufRead", "BufNewFile"},
             config = conf.which_key,
         }
-
         use {
             "lewis6991/gitsigns.nvim",
             event = {"BufRead", "BufNewFile"},
@@ -91,12 +81,10 @@ return require("packer").startup({
             after = "telescope.nvim",
             config = conf.nvim_treesitter,
         }
-
         use {
             "nvim-treesitter/nvim-treesitter-textobjects",
             after = "nvim-treesitter"
         }
-
         use {
             "lukas-reineke/indent-blankline.nvim",
             event = {"BufRead","BufNewFile"},
@@ -110,13 +98,11 @@ return require("packer").startup({
             "neovim/nvim-lspconfig",
             config = conf.nvim_lsp,
         }
-
         use {
             "glepnir/lspsaga.nvim",
             after = "nvim-lspconfig",
             config = conf.lspsaga,
         }
-
         use {
             "hrsh7th/nvim-cmp",
             event = "InsertEnter",
