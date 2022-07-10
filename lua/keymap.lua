@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+-- fix map gg conflict
+vim.keymap.set("n", "gg", "1G", {noremap = true, silent = true})
 -- nvimtree
 vim.keymap.set("n", "<c-q>", "<cmd>NvimTreeToggle<cr>", {noremap = true, silent = true})
 -- bufferline
