@@ -396,8 +396,8 @@ function config.nvim_lsp()
     lspconfig.cssls.setup{
         capabilities = capabilities,
     }
-    lspconfig.tsserver.setup{
-    }
+    lspconfig.tsserver.setup{}
+    lspconfig.zls.setup{}
 end
 
 function config.lspsaga()
