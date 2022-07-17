@@ -88,16 +88,16 @@ function config.galaxyline()
         },
     }
 
-    gls.left[7] = {
-        PerCent = {
-            highlight = { colors.fg, colors.bg, "bold" },
-            provider = "LinePercent",
-            separator = " ",
-            separator_highlight = { "NONE", colors.bg },
-        },
-    }
+    -- gls.left[7] = {
+    --     PerCent = {
+    --         highlight = { colors.fg, colors.bg, "bold" },
+    --         provider = "LinePercent",
+    --         separator = " ",
+    --         separator_highlight = { "NONE", colors.bg },
+    --     },
+    -- }
 
-    gls.left[8] = {
+    gls.left[7] = {
         DiagnosticError = {
             highlight = { colors.red, colors.bg },
             icon = "  ",
@@ -105,7 +105,7 @@ function config.galaxyline()
         },
     }
 
-    gls.left[9] = {
+    gls.left[8] = {
         DiagnosticWarn = {
             highlight = { colors.yellow, colors.bg },
             icon = "  ",
@@ -113,7 +113,7 @@ function config.galaxyline()
         },
     }
 
-    gls.left[10] = {
+    gls.left[9] = {
         DiagnosticHint = {
             highlight = { colors.cyan, colors.bg },
             icon = "  ",
@@ -121,7 +121,7 @@ function config.galaxyline()
         },
     }
 
-    gls.left[11] = {
+    gls.left[10] = {
         DiagnosticInfo = {
             highlight = { colors.blue, colors.bg },
             icon = "  ",
@@ -138,7 +138,7 @@ function config.galaxyline()
                 end
                 return true
             end,
-            highlight = { colors.yellow, colors.bg, "bold" },
+            highlight = { colors.blue, colors.bg, "bold" },
             icon = " LSP:",
             provider = "GetLspClient",
         },
