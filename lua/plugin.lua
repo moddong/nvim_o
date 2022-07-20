@@ -3,12 +3,13 @@ local packer_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 local compile_path = packer_path .. "/plugin/packer_compiled.lua"
 local state = uv.fs_stat(packer_path)
 if not state then
-    local cmd = "!git clone git@github.com:wbthomason/packer.nvim " .. packer_path
-    api.nvim_command(cmd)
+    local install = "!git clone git@github.com:wbthomason/packer.nvim " .. packer_path
+    api.nvim_command(install)
     api.nvim_command("packadd packer.nvim")
     vim.notify("please reopen nvim and run PackerInstall PackerCompile")
 end
 local conf = require("config")
+
 return require("packer").startup({
     function(use)
         use {"wbthomason/packer.nvim"}
