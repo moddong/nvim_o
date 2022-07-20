@@ -96,6 +96,7 @@ return require("packer").startup({
         }
         use {
             "neovim/nvim-lspconfig",
+            -- event = {"BufRead", "BufNewFile"},
             config = conf.nvim_lsp,
         }
         use {
@@ -117,10 +118,10 @@ return require("packer").startup({
         }
     end,
     config = {
-        compile_path = compile_path,
-        git = {
-            default_url_format = "git@github.com:%s",
-            clone_timeout = 120
-        },
+         compile_path = compile_path,
+         git = {
+             default_url_format = "git@github.com:%s",
+             clone_timeout = 120
+         },
     }
 })
